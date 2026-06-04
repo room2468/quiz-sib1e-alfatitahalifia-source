@@ -29,13 +29,8 @@ read -r used_mb
 #   echo "Usage: $usage%"
 #   echo "Status: $status"
 
-# TODO: Replace this line with your implementation
-
-read -r total
-read -r used
-
-free=$(( total - used ))
-usage=$(( used * 100 / total ))
+free_mb=$(( total_mb - used_mb ))
+usage=$(( used_mb * 100 / total_mb ))
 
 if (( usage >= 90 )); then
     status="Critical"
@@ -45,6 +40,6 @@ else
     status="Normal"
 fi
 
-echo "Free: $free MB"
+echo "Free: $free_mb MB"
 echo "Usage: $usage%"
 echo "Status: $status"
