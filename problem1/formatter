@@ -18,7 +18,5 @@ read -r first_name last_name
 # Step 4: Print the result in the format: "LASTNAME, Firstname"
 #   Use: echo "$last_upper, $first_title"
 
-# TODO: Replace this line with your implementation
-!/bin/env bash
 read -r first_name last_name
 echo "${last_name^^}, ${first_name^}"
